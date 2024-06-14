@@ -1,33 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+<nav class="navbar is-transparent is-spaced has-shadow" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            Dionysus
+        </a>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dionysus - Your Movie Oasis</title>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
 
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/globals.min.css') }}">
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item">
+                Home
+            </a>
 
-    <script src="https://unpkg.com/htmx.org@1.9.5/dist/htmx.min.js"></script>
-    <script src="{{ url_for('static', filename='js/globals.min.js') }}"></script>
+            <a class="navbar-item">
+                Movies
+            </a>
 
-    {% block stylesheet %} {% endblock %}
-    {% block script %} {% endblock %}
+            <a class="navbar-item">
+                Shows
+            </a>
 
-</head>
+            <a class="navbar-item">
+                Watchlist
+            </a>
 
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    More
+                </a>
 
-<body class="bg-gray-100 font-sans">
+                <div class="navbar-dropdown is-boxed">
+                    <a class="navbar-item">
+                        About
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">
+                        Help
+                    </a>
+                </div>
+            </div>
+        </div>
 
-    {# {%- include "/headers/h-logout-navigation.html" %}
-    {%- include "/headers/h-logout-top-panel.html" %}
-    {%- include "/navigation/site-left-nav_loggedout-desktop.html" %} #}
-
-    {% block body -%} {% endblock %}
-
-    {%- include "/footer.html" %}
-
-</body>
-
-</html>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-secondary">
+                        <strong>Sign up</strong>
+                    </a>
+                    <a class="button is-dark">
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

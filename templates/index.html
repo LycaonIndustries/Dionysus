@@ -1,47 +1,110 @@
-{%- extends "header.html" %}
+{%- extends "base.html" %}
 
 {%- block body %}
-<header class="bg-gray-800 text-white py-4">
-    <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold">dionysus</h1>
-        <nav>
-            <ul class="flex space-x-4">
-            </ul>
-        </nav>
-    </div>
-</header>
 
-<main class="container mx-auto py-12">
-    <section class="flex flex-col items-center">
-        <h2 class="text-4xl font-bold text-gray-800 mb-4">Discover Your Next Movie Adventure</h2>
-        <p class="text-lg text-gray-600 max-w-md text-center">Find, track, and get personalized movie recommendations
+{# <section class="section">
+    <div class="container">
+        <h2 class="title">Discover Your Next Movie Adventure</h2>
+        <p class="subtitle">Find, track, and get personalized movie recommendations
             with dionysus. Your one-stop shop for cinematic bliss.</p>
-        <div class="mt-6">
+        <div class="buttons">
+            <button class="button is-primary" hx-get="/get-random-movie" hx-target="#random-image is-1by1 movie-title">
+                Get Random Movie
+            </button>
         </div>
-    </section>
+    </div>
+</section> #}
+<section class="lycaon is-info">
+    <div class="lycaon-body">
+        <div class="columns is-vcentered">
+            <div class="column is-one-third">
+                <p class="title">Dionysus</p>
+                <p class="subtitle">Your Next Movie Adventure</p>
+            </div>
+            <div class="column is-two-thirds">
+                <div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols">
+                    <div class="grid">
+                        <div class="cell">
+                            <img class="image is-1by1 movie-poster" src="{{ url_for('static', filename='/images/0.jpg') }}">
+                        </div>
+                        <div class="cell">
+                            <img class="image is-1by1 movie-poster" src="{{ url_for('static', filename='/images/1.jpeg') }}">
+                        </div>
+                        <div class="cell">
+                            <img class="image is-1by1 movie-poster" src="{{ url_for('static', filename='/images/2.jpeg') }}">
+                        </div>
+                        <div class="cell">
+                            <img class="image is-1by1 movie-poster" src="{{ url_for('static', filename='/images/2.jpg') }}">
+                        </div>
+                        <div class="cell">
+                            <img class="image is-1by1 movie-poster" src="{{ url_for('static', filename='/images/3.jpg') }}">
+                        </div>
+                        <div class="cell">
+                            <img class="image is-1by1 movie-poster" src="{{ url_for('static', filename='/images/3.jpeg') }}">
+                        </div>
+                        <div class="cell">
+                            <img class="image is-1by1 movie-poster" src="{{ url_for('static', filename='/images/4.jpg') }}">
+                        </div>
+                        <div class="cell">
+                            <img class="image is-1by1 movie-poster" src="{{ url_for('static', filename='/images/5.jpg') }}">
+                        </div>
+                        <div class="cell">
+                            <img class="image is-1by1 movie-poster" src="{{ url_for('static', filename='/images/6.jpg') }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section class="mt-12">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">dionysus Features</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div class="bg-white rounded-md shadow-md p-4">
-                <i class="fas fa-film text-blue-500 text-2xl mb-2"></i>
-                <h3 class="text-xl font-bold mb-2">Discover Movies</h3>
-                <p class="text-gray-600">Browse a wide selection of movies, filter by genre, and explore new releases.
-                </p>
+<section class="section">
+    <div class="container">
+        <h2 class="title">Dionysus Features</h2>
+        <div class="columns is-multiline">
+            <div class="column is-one-third">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            <i class="fas fa-film text-blue-500 text-2xl"></i>
+                            Discover Movies
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <p>Browse a wide selection of movies, filter by genre, and explore new releases.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="bg-white rounded-md shadow-md p-4">
-                <i class="fas fa-star text-blue-500 text-2xl mb-2"></i>
-                <h3 class="text-xl font-bold mb-2">Personalized Recommendations</h3>
-                <p class="text-gray-600">Get tailored movie recommendations based on your preferences and watch history.
-                </p>
+            <div class="column is-one-third">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            <i class="fas fa-star text-blue-500 text-2xl"></i>
+                            Personalized Recommendations
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <p>Get tailored movie recommendations based on your preferences and watch history.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="bg-white rounded-md shadow-md p-4">
-                <i class="fas fa-list text-blue-500 text-2xl mb-2"></i>
-                <h3 class="text-xl font-bold mb-2">Track Your Watchlist</h3>
-                <p class="text-gray-600">Create a watchlist of movies you want to see and easily keep track of your
-                    progress.</p>
+            <div class="column is-one-third">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            <i class="fas fa-list text-blue-500 text-2xl"></i>
+                            Track Your Watchlist
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <p>Create a watchlist of movies you want to see and easily keep track of your
+                            progress.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-</main>
+    </div>
+</section>
 {%- endblock %}
