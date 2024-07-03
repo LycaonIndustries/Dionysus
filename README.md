@@ -27,3 +27,5 @@
 
 - TMDb (The Movie Database): Use TMDb's API to retrieve movie and show data.
 - OMDb (Open Movie Database): Another API for searching and retrieving movie information.
+
+This is a work in progress
