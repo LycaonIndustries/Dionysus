@@ -8,7 +8,7 @@
 - Watch History: Track what you've seen.
 - Ratings: Allow users to rate movies and shows.
 - Reviews: Enable users to write reviews.
-- Social Features: Friends, recommendations, etc.
+- Social Features: Friends, etc.
 - Personalized Recommendations: Use algorithms to suggest movies/shows.
 - Group Watchlists: Share lists with others.
 - Integrations: Connect with other services like TMDb.
@@ -27,3 +27,5 @@
 
 - TMDb (The Movie Database): Use TMDb's API to retrieve movie and show data.
 - OMDb (Open Movie Database): Another API for searching and retrieving movie information.
+
+This is a work in progress
