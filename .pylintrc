@@ -1,9 +1,0 @@
-[MASTER]
-
-# Specify the checker(s) to use. Only the given checkers will be enabled, the
-# others will be disabled. Use "pylint --list-checkers" command to see the list of
-# all available checkers.
-checkers=circular-import
-
-disable=all
-enable=R0401
